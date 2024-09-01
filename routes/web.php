@@ -13,7 +13,7 @@ Route::get('/posts', [PostController::class, 'index']);
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get ('/posts/{post}', [Postcontroller::class ,'show']);
 Route::get('/', function () {
     return view('welcome');
 });
