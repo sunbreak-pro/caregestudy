@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-Route::get('/posts', [PostController::class, 'index']);
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,5 @@ Route::get('/posts', [PostController::class, 'index']);
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-?>
+Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/{post}', [Postcontroller::class ,'show']);
