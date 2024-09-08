@@ -22,12 +22,14 @@
                         @method('DELETE')
                         <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
                     </form>
+                    @endforeach
                 </div>
-            @endforeach
-        </div>
-        <div class='paginate'>
-            {{ $posts->links() }}
-        </div>
+                <div class="footer">
+                    <a href="/">[戻る]</a>
+                </div>
+            <div class='paginate'>
+                {{ $posts->links() }}
+            </div>
         <script>
             function deletePost(id)
             {
