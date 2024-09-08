@@ -13,21 +13,22 @@
             @foreach ($posts as $post)
                 <div class= 'post'>
                     <h2 class='title'>
-                        <a href="posts/{{ $post->id }}">{{ $post->title }}</a>
+                        <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
                     </h2>
-                    <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a><br>
                     <p class='body'>{{ $post->body }}</p>
                     <form action="/posts/{{ $post->id }}" id="form_{{ $post->id }}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
-                </form>
-            </div>
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" onclick="deletePost({{ $post->id }})">delete</button> 
+                    </form>
+                </div>
             @endforeach
-        </div>
-        <div class='paginate'>
-            {{ $posts->links() }}
-        </div>
+                <div class="footer">
+                <a href="/">[戻る]</a>
+                </div>
+            <div class='paginate'>
+                {{ $posts->links() }}
+            </div>
         <script>
             function deletePost(id)
             {
@@ -38,6 +39,7 @@
                 }
             }
         </script>
+        
     </body>
 </html>
 

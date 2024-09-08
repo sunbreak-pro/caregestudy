@@ -13,6 +13,7 @@ use App\Http\Controllers\CategoryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/categories/{category}', [CategoryController::class,'index']);
 Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/create', [PostController::class, 'create']);

@@ -7,6 +7,7 @@
     <body>
         <h1>Blog name</h1>
         <form action="/posts" method="POST">
+            
             @csrf
             <div class="title">
                 <h2>タイトル</h2>

@@ -31,6 +31,6 @@
     </form>
     <div class='footer'>
         <a href='/'>[戻る]</a>
-    </div>
+</div>
 </body>
 </html>
