@@ -5,7 +5,9 @@
         <title>Blog</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-   </head>
+    </head>
+    <x-app-layout>
+    <x-slot name="header">
    <body>
        <h1>Blog Name</h1>
        <a href="posts/create">[create]</a>
@@ -23,6 +25,7 @@
                     </form>
                 </div>
             @endforeach
+        </x-slot>
                 <div class="footer">
                 <a href="/">[戻る]</a>
                 </div>
@@ -39,7 +42,7 @@
                 }
             }
         </script>
-        
     </body>
+    </x-app-layout>
 </html>
 
